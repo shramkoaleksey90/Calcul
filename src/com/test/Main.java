@@ -2,7 +2,7 @@ package com.test;
 
 import java.util.Scanner;
 
-public class Dispatcher {
+public class Main {
     public static void main(String[] args) {
         System.out.println("Hello it is simple calculator");
         Scanner scanner = new Scanner(System.in);
