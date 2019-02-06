@@ -4,17 +4,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello it is simple calculator for four digit numbers");
+        final int min = -999_999_999;
+        final int max = 999_999_999;
+        System.out.println("Hello it is simple calculator for nine digit numbers");
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter first value");
         int x = scanner.nextInt();
-        if(x>9999) throw new ArithmeticException();
+        if(x<min||x>max) throw new ArithmeticException();
         scanner.nextLine();
 
         System.out.println("Enter second value");
         int y = scanner.nextInt();
-        if(y>9999) throw new ArithmeticException();
+        if(y<min||y>max) throw new ArithmeticException();
         scanner.nextLine();
 
         System.out.println("Select operation equal + - * or /");
