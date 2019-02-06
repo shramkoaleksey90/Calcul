@@ -1,6 +1,6 @@
 package com.test;
 
-public class Calculator implements ICalcul{
+public class Calculator implements ICalculator {
     @Override
     public double add(int x, int y) {
         return x+y;
