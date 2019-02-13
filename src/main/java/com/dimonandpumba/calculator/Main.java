@@ -2,29 +2,26 @@ package main.java.com.dimonandpumba.calculator;
 
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        final int min = -999_999_999;
-        final int max = 999_999_999;
-        System.out.println("Hello it is simple calculator for nine digit numbers");
-        Scanner scanner = new Scanner(System.in);
+public class Main extends MyScannerForInteger{
 
-        System.out.println("Enter first value");
-        int x = scanner.nextInt();
-        if(x<min||x>max) throw new ArithmeticException();
-        scanner.nextLine();
+    public static void main(String[] args) {
+
+        System.out.println(
+                "Hello it is simple calculator for nine digit numbers\n"
+                        +"Enter first value");
+        int x = myScannerForInteger();
 
         System.out.println("Enter second value");
-        int y = scanner.nextInt();
-        if(y<min||y>max) throw new ArithmeticException();
-        scanner.nextLine();
+        int y = myScannerForInteger();
 
         System.out.println("Select operation equal + - * or /");
 
-        Calculator calculator =  new Calculator();
-
+        Scanner scanner = new Scanner(System.in);
         String c = scanner.next();
         scanner.close();
+
+        Calculator calculator =  new Calculator();
+
         if (c.equals("+")) {
             System.out.println(calculator.add(x,y));
         }

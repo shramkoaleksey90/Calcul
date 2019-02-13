@@ -1,12 +1,13 @@
 package test.java.com.dimonandpumba.calculator;
 
-import org.junit.Test;
+import main.java.com.dimonandpumba.calculator.Calculator;
 
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CalculatorTest {
 
-    main.java.com.dimonandpumba.calculator.Calculator calculator = new main.java.com.dimonandpumba.calculator.Calculator();
+    Calculator calculator = new Calculator();
 
     @Test
     public void add(){
