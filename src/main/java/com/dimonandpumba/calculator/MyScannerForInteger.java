@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class MyScannerForInteger {
     static Scanner scanner = new Scanner(System.in);
-    final static int min = Integer.MIN_VALUE;
-    final static int max = Integer.MAX_VALUE;
+    final static int min = -999_999_999;
+    final static int max = 999_999_999;
 
     public static int myScannerForInteger (){
         int number = scanner.nextInt();
