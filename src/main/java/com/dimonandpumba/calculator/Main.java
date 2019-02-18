@@ -21,23 +21,30 @@ public class Main extends MyScannerForInteger{
         scanner.close();
 
         Calculator calculator =  new Calculator();
-
+        double result=0;
         switch (c) {
             case "+":
-                System.out.println(calculator.add(x, y));
+                result = calculator.add(x, y);
                 break;
             case "-":
-                System.out.println(calculator.minus(x, y));
+                result = calculator.minus(x, y);
                 break;
             case "*":
-                System.out.println(calculator.multiply(x, y));
+                result=calculator.multiply(x, y);
                 break;
             case "/":
-                System.out.println(calculator.divide(x, y));
+                result=calculator.divide(x, y);
                 break;
             default:
                 System.out.println("Attention, wrong input, start over ");
                 break;
+        }
+
+        if (result==(int)result) {
+            System.out.println((int) result);
+        }
+        else {
+            System.out.println(result);
         }
     }
 }
