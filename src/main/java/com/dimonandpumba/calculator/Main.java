@@ -2,7 +2,10 @@ package main.java.com.dimonandpumba.calculator;
 
 import java.util.Scanner;
 
-public class Main extends MyScannerForInteger{
+public class Main {
+    private static Scanner scanner = new Scanner(System.in);
+    private final static int min = -999_999_999;
+    private final static int max = 999_999_999;
 
     public static void main(String[] args) {
 
@@ -46,5 +49,10 @@ public class Main extends MyScannerForInteger{
         else {
             System.out.println(result);
         }
+    }
+    private static int myScannerForInteger (){
+        int number = scanner.nextInt();
+        if (number < min || number > max) throw new ArithmeticException();
+        return number;
     }
 }
