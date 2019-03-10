@@ -1,4 +1,4 @@
-package main.com.dimonandpumba.calculator;
+package main.java.com.dimonandpumba.calculator;
 
 public interface ICalculator {
     double add (int x,int y);

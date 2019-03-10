@@ -1,4 +1,4 @@
-package main.com.dimonandpumba.calculator;
+package main.java.com.dimonandpumba.calculator;
 
 public class Calculator implements ICalculator {
     @Override
