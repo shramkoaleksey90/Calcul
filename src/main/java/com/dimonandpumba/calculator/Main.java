@@ -3,18 +3,15 @@ package main.java.com.dimonandpumba.calculator;
 import java.util.Scanner;
 
 public class Main {
-    private static Scanner scanner;
-
-
     public static void main(String[] args) {
 
         System.out.println(
                 "Hello it is simple calculator for nine digit numbers\n"
                         +"Enter first value");
-        int x = myScannerForInteger();
+        double x = myScannerForDouble();
 
         System.out.println("Enter second value");
-        int y = myScannerForInteger();
+        double y = myScannerForDouble();
 
         System.out.println("Select operation equal + - * or /");
 
@@ -49,8 +46,8 @@ public class Main {
             System.out.println(result);
         }
     }
-    private static int myScannerForInteger (){
-        scanner = new Scanner(System.in);
-        return scanner.nextInt();
+    private static double myScannerForDouble(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
     }
 }

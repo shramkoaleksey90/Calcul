@@ -8,22 +8,22 @@ import static org.junit.Assert.assertEquals;
 public class ICalculatorTest {
     private ICalculator iCalculator = new ICalculator() {
         @Override
-        public double add(int x, int y) {
+        public double add(double x, double y) {
             return x+y;
         }
 
         @Override
-        public double minus(int x, int y) {
+        public double minus(double x, double y) {
             return x-y;
         }
 
         @Override
-        public double multiply(int x, int y) {
+        public double multiply(double x, double y) {
             return x*y;
         }
 
         @Override
-        public double divide(int x, int y) {
+        public double divide(double x, double y) {
             return x/y;
         }
     };
