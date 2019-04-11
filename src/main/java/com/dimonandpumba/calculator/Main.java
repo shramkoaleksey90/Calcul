@@ -3,9 +3,8 @@ package main.java.com.dimonandpumba.calculator;
 import java.util.Scanner;
 
 public class Main {
-    private static Scanner scanner = new Scanner(System.in);
-    private final static int min = -999_999_999;
-    private final static int max = 999_999_999;
+    private static Scanner scanner;
+
 
     public static void main(String[] args) {
 
@@ -51,8 +50,7 @@ public class Main {
         }
     }
     private static int myScannerForInteger (){
-        int number = scanner.nextInt();
-        if (number < min || number > max) throw new ArithmeticException();
-        return number;
+        scanner = new Scanner(System.in);
+        return scanner.nextInt();
     }
 }
