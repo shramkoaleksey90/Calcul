@@ -14,11 +14,17 @@ public class Main {
         double y = myScannerForDouble();
 
         System.out.println("Select operation equal + - * or /");
-
         Scanner scanner = new Scanner(System.in);
         String c = scanner.next();
         scanner.close();
 
+        double result = getResult(x, y, c);
+
+        new View(result);
+
+    }
+
+    private static double getResult(double x, double y, String c) {
         Calculator calculator =  new Calculator();
         double result=0;
         switch (c) {
@@ -38,10 +44,9 @@ public class Main {
                 System.out.println("Attention, wrong input, start over ");
                 break;
         }
-
-        new View(result);
-
+        return result;
     }
+
     private static double myScannerForDouble(){
         Scanner scanner = new Scanner(System.in);
         return scanner.nextDouble();
