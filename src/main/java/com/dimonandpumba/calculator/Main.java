@@ -6,15 +6,15 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-        System.out.println( "Hello it is simple calculator for nine digit numbers\n"+
+        System.out.println( "Hello it is simple calculator\n"+
                             "Enter first value");
         double x = scanner.nextDouble();
 
-        System.out.println("Enter second value");
-        double y = scanner.nextDouble();
-
         System.out.println("Select operation equal + - * or /");
         String c = scanner.next();
+
+        System.out.println("Enter second value");
+        double y = scanner.nextDouble();
 
         double result = getResult(x, y, c);
 
@@ -33,13 +33,13 @@ public class Main {
                 result = calculator.minus(x, y);
                 break;
             case "*":
-                result=calculator.multiply(x, y);
+                result = calculator.multiply(x, y);
                 break;
             case "/":
-                result=calculator.divide(x, y);
+                result = calculator.divide(x, y);
                 break;
             default:
-                System.out.println("Attention, wrong input, start over ");
+                System.out.println("Attention, wrong input, start over");
                 break;
         }
         return result;
