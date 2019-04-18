@@ -27,7 +27,7 @@ public class ICalculatorTest {
             return x/y;
         }
     };
-/*
+
     @Test
     public void add() {
        assertEquals(5,iCalculator.add(2,3),0);
@@ -38,11 +38,4 @@ public class ICalculatorTest {
         iCalculator.divide(5,0);
     }
 
-    @Test
-    public void multiply() {
-        assertEquals(-1294967299,
-                iCalculator.multiply(999_999_999,3),0);
-        // ;-P
-    }
-*/
 }

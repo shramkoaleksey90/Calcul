@@ -8,13 +8,27 @@ public class Main {
 
         System.out.println( "Hello it is simple calculator\n"+
                             "Enter first value");
-        double x = scanner.nextDouble();
+        double x;
+        while (!scanner.hasNextDouble()){
+            System.out.println("Enter a value");
+            scanner.next();
+        }
+        x = scanner.nextDouble();
 
         System.out.println("Select operation equal + - * or /");
+        while (!scanner.hasNext("[+\\-/*]")) {
+            System.out.println("That is not a operation!");
+            scanner.next();
+        }
         String c = scanner.next();
 
         System.out.println("Enter second value");
-        double y = scanner.nextDouble();
+        double y;
+        while (!scanner.hasNextDouble()){
+            System.out.println("Enter a value");
+            scanner.next();
+        }
+        y = scanner.nextDouble();
 
         double result = getResult(x, y, c);
 
