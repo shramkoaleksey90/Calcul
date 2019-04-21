@@ -1,6 +1,6 @@
 package main.java.com.dimonandpumba.calculator;
 
-public class Calculator implements ICalculator {
+ class Calculator implements ICalculator {
     @Override
     public double add(double x, double y) {
         return x+y;

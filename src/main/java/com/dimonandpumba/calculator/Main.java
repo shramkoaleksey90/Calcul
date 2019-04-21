@@ -33,6 +33,7 @@ public class Main {
         double result = getResult(x, y, c);
 
         new View(result);
+
         scanner.close();
     }
 
