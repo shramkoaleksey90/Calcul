@@ -26,13 +26,11 @@ class View {
         int ChoseRounding = scanner.nextInt();
         if (ChoseRounding == 1){
             System.out.println("The result of the operation is \n"+ result);
-        }else if (ChoseRounding == 2){
+        }else{
             System.out.println("Please entered the degree of the rounding scale(0 is rounding to integer)");
             int scale = scanner.nextInt();
             BigDecimal bigDecimal = new BigDecimal(result);
             System.out.println(bigDecimal.setScale(scale, BigDecimal.ROUND_HALF_UP));
-        }else{
-            System.out.println("Attention, wrong input, start over");
         }
     }
 }
