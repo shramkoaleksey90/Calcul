@@ -1,4 +1,4 @@
-package main.java.com.dimonandpumba.calculator;
+package com.dimonandpumba.calculator;
 
 import java.util.Scanner;
 
@@ -32,7 +32,8 @@ public class Main {
 
         double result = getResult(x, y, c);
 
-        new View(result);
+        View view = new View(result);
+        new Storage(view.getValue());
 
         scanner.close();
     }
