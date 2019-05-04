@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 class View {
     private double value;
 
-    public double getValue() {
+    double getValue() {
         return value;
     }
 
