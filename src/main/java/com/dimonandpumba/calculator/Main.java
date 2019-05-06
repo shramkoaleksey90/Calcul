@@ -1,13 +1,20 @@
 package com.dimonandpumba.calculator;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
-    static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
 
-        System.out.println( "Hello it is simple calculator\n"+
-                            "Enter first value");
+    static Queue queue = new LinkedList();
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        Storage storage = new Storage();
+
+        System.out.println( "Hello it is simple calculator");
+        queue = storage.getQueue(queue);
+        System.out.println("Enter first value");
         double x;
         while (!scanner.hasNextDouble()){
             System.out.println("Enter a value");
@@ -33,7 +40,7 @@ public class Main {
         double result = getResult(x, y, c);
 
         View view = new View(result);
-        new Storage(view.getValue());
+        storage.setQueue(view.getValue(),queue);
 
         scanner.close();
     }
