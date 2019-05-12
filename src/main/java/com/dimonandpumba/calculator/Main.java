@@ -13,7 +13,8 @@ public class Main {
         Storage storage = new Storage();
 
         System.out.println( "Hello it is simple calculator");
-        queue = storage.getQueue(queue);
+        queue = storage.getQueue();
+        storage.setQueue(queue);
         System.out.println("Enter first value");
         double x;
         while (!scanner.hasNextDouble()){
@@ -40,7 +41,7 @@ public class Main {
         double result = getResult(x, y, c);
 
         View view = new View(result);
-        storage.setQueue(view.getValue(),queue);
+        storage.writeStorage(view.getValue());
 
         scanner.close();
     }
