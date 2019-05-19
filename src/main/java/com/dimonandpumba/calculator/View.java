@@ -10,19 +10,17 @@ class View {
     View(double result) {
         value = result;
         storage = new Storage();
-        value = output(value);
+        output(value);
     }
 
-    private double output(double result) {
+    private void output(double result) {
         if (result == (int)result) {
             System.out.println("The result of the operation is \n"+(int) result);
             storage.writeStorage(result);
-            return result;
         }
         else {
             System.out.println("The result of the operation is \n"+rounding(result));
             storage.writeStorage(result);
-            return rounding(result);
         }
     }
 
