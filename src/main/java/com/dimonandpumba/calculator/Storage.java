@@ -5,20 +5,20 @@ import java.util.Queue;
 
  class Storage {
 
-    private final String MEMORY = "src/main/resources/memory.dat";
+    private static final String MEMORY = "src/main/resources/memory.dat";
     private Queue queue;
 
-     public Queue getQueue() {
+      Queue getQueue() {
          return readStorage(queue);
      }
 
-     public void setQueue(Queue queue) {
+      void setQueue(Queue queue) {
          this.queue = queue;
      }
 
-     void writeStorage(double value) {
-        queue.add(value);
-        if(queue.size()>5){
+     <T> void writeStorage(T value) {
+         queue.add(value);
+         if(queue.size()>5){
             queue.poll();
         }
 

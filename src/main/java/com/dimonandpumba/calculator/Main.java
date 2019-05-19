@@ -40,8 +40,7 @@ public class Main {
 
         double result = getResult(x, y, c);
 
-        View view = new View(result);
-        storage.writeStorage(view.getValue());
+        new View(result);
 
         scanner.close();
     }
