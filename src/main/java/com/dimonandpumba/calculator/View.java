@@ -4,23 +4,21 @@ import java.math.BigDecimal;
 
 class View {
     private double value;
-    private Storage storage;
+    Storage storage;
 
-
-    View(double result) {
+    View(double result, Storage storage) {
         value = result;
-        storage = new Storage();
-        output(value);
+        this.storage = storage;
     }
 
-    private void output(double result) {
-        if (result == (int)result) {
-            System.out.println("The result of the operation is \n"+(int) result);
-            storage.writeStorage(result);
+     void output() {
+        if (value == (int)value) {
+            System.out.println("The result of the operation is \n"+(int) value);
+            storage.writeStorage((int)value);
         }
         else {
-            System.out.println("The result of the operation is \n"+rounding(result));
-            storage.writeStorage(result);
+            System.out.println("The result of the operation is \n"+rounding(value));
+            storage.writeStorage(rounding(value));
         }
     }
 

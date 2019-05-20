@@ -8,9 +8,10 @@ public class Main {
 
     static Queue queue = new LinkedList();
     static Scanner scanner = new Scanner(System.in);
+    static Storage storage = new Storage();
+
 
     public static void main(String[] args) {
-        Storage storage = new Storage();
 
         System.out.println( "Hello it is simple calculator");
         queue = storage.getQueue();
@@ -40,7 +41,8 @@ public class Main {
 
         double result = getResult(x, y, c);
 
-        new View(result);
+        View view = new View(result, storage);
+        view.output();
 
         scanner.close();
     }
