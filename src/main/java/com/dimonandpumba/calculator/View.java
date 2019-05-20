@@ -4,14 +4,14 @@ import java.math.BigDecimal;
 
 class View {
     private double value;
-    Storage storage;
+    private Storage storage;
 
     View(double result, Storage storage) {
         value = result;
         this.storage = storage;
     }
 
-     void output() {
+    void output() {
         if (value == (int)value) {
             System.out.println("The result of the operation is \n"+(int) value);
             storage.writeStorage((int)value);

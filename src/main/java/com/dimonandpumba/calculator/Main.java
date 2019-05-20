@@ -1,21 +1,15 @@
 package com.dimonandpumba.calculator;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
 
-    static Queue queue = new LinkedList();
-    static Scanner scanner = new Scanner(System.in);
-    static Storage storage = new Storage();
-
+    private static Scanner scanner = new Scanner(System.in);
+    private static Storage storage = new Storage();
 
     public static void main(String[] args) {
-
         System.out.println( "Hello it is simple calculator");
-        queue = storage.getQueue();
-        storage.setQueue(queue);
+        storage.readStorage();
         System.out.println("Enter first value");
         double x;
         while (!scanner.hasNextDouble()){
