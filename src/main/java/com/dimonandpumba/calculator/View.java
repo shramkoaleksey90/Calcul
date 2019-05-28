@@ -17,11 +17,16 @@ class View {
             storage.writeStorage((int)value);
         }
         else {
-            System.out.println("The result of the operation is \n"+rounding(value));
-            storage.writeStorage(rounding(value));
+            MyProperties myProperties = new MyProperties();
+            int roundingMode = myProperties.getRoundingMode();
+            int scale = myProperties.getScale();
+            BigDecimal bigDecimal = new BigDecimal(value);
+            value = bigDecimal.setScale(scale,roundingMode).doubleValue();
+            System.out.println("The result of the operation is \n"+value);
+            storage.writeStorage(value);
         }
     }
-
+/*
     private double rounding(double result) {
         MyProperties myProperties = new MyProperties();
         int roundingMode = myProperties.getRoundingMode();
@@ -29,4 +34,6 @@ class View {
         BigDecimal bigDecimal = new BigDecimal(result);
         return result = bigDecimal.setScale(scale,roundingMode).doubleValue();
     }
+
+ */
 }

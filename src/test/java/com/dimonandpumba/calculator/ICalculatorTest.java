@@ -1,6 +1,5 @@
-package test.java.com.dimonandpumba.calculator;
+package com.dimonandpumba.calculator;
 
-import main.java.com.dimonandpumba.calculator.ICalculator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

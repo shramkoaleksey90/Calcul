@@ -18,6 +18,7 @@ import java.util.Queue;
             try {
                  ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(MEMORY));
                  queue = (Queue) objectInputStream.readObject();
+                 objectInputStream.close();
                  System.out.println("Last results: " + queue);
             } catch (Exception e) {
                  e.printStackTrace();
@@ -34,6 +35,7 @@ import java.util.Queue;
         try {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(MEMORY));
             objectOutputStream.writeObject(queue);
+            objectOutputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("output");
